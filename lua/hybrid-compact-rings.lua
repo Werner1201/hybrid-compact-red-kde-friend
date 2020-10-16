@@ -20,7 +20,7 @@ To call this script in Conky, use the following (assuming that you save this scr
 ]]
 
 g_main_colour = "0xa8a8a8"
-g_alt_colour = "0xa8a8a8"
+g_alt_colour = "0x0a0a0a"
 
 normal = "0x4285F4"
 warn = "0xff7200"
@@ -48,8 +48,8 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=59,
-        thickness=8.0,
+        radius=43,
+        thickness=11.0,
         start_angle=270,
         end_angle=360,
         text_id=13
@@ -63,8 +63,8 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=49,
-        thickness=8,
+        radius=31,
+        thickness=11.0,
         start_angle=270,
         end_angle=360,
         text_id=14
@@ -78,8 +78,8 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=39,
-        thickness=8,
+        radius=19,
+        thickness=11.0,
         start_angle=270,
         end_angle=360,
         text_id=15
@@ -94,8 +94,8 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=39,
-        thickness=8.0,
+        radius=19,
+        thickness=11.0,
         start_angle=90,
         end_angle=180,
         text_id=16
@@ -109,8 +109,8 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=49,
-        thickness=8.0,
+        radius=31,
+        thickness=11.0,
         start_angle=90,
         end_angle=180,
         text_id=17
@@ -124,200 +124,153 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=140,
-        radius=59,
-        thickness=8.0,
+        radius=43,
+        thickness=11.0,
         start_angle=90,
         end_angle=180,
         text_id=18
     },
 
-    -- -- ram usage
-    -- {
-    --     name='memperc',
-    --     arg='',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=91,
-    --     thickness=4,
-    --     start_angle=180,
-    --     end_angle=450,
-    --     text_id=7
-    -- },
+    -- ram, swap usage
+    {
+        name='memperc',
+        arg='',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.5,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=106,
+        thickness=4,
+        start_angle=0,
+        end_angle=270,
+        text_id=19
+    },
+    {
+        name='swapperc',
+        arg='',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.45,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=100,
+        thickness=4,
+        start_angle=0,
+        end_angle=270,
+        text_id=20
+    },
 
-    -- -- cpu temp, gpu temp, battery % and swap
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 1',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=140,
-    --     radius=106,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=8
-    -- },
-    -- {
-    --     name='nvidia',
-    --     arg='temp',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=370,
-    --     radius=106,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=9
-    -- },
-    -- {
-    --     name='swapperc',
-    --     arg='',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=100,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=10
-    -- },
-    -- {
-    --     name='battery_percent',
-    --     arg='BAT1',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=106,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=11
-    -- },
+    -- cpu temp, gpu temp and battery %
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 1',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.4,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=94,
+        thickness=4,
+        start_angle=0,
+        end_angle=270,
+        text_id=21
+    },
+    {
+        name='nvidia',
+        arg='temp',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.35,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=88,
+        thickness=4,
+        start_angle=0,
+        end_angle=270,
+        text_id=22
+    },
+    {
+        name='battery_percent',
+        arg='BAT1',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.3,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=82,
+        thickness=4,
+        start_angle=0,
+        end_angle=270,
+        text_id=23
+    },
 
-    -- -- storage usage
-    -- {
-    --     name='fs_used_perc',
-    --     arg='/',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=66,
-    --     thickness=15,
-    --     start_angle=0,
-    --     end_angle=90,
-    --     text_id=12
-    -- },
-    -- {
-    --     name='fs_used_perc',
-    --     arg='/opt',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.4,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=50,
-    --     thickness=14.5,
-    --     start_angle=0,
-    --     end_angle=90,
-    --     text_id=13
-    -- },
-    -- {
-    --     name='fs_used_perc',
-    --     arg='/usr',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=34.5,
-    --     thickness=14.0,
-    --     start_angle=0,
-    --     end_angle=90,
-    --     text_id=14
-    -- },
-    -- {
-    --     name='fs_used_perc',
-    --     arg='/home',
-    --     max=100,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.2,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=19.5,
-    --     thickness=13.5,
-    --     start_angle=0,
-    --     end_angle=90,
-    --     text_id=15
-    -- },
-
-    -- -- clock
-    -- {
-    --     name='time',
-    --     arg='%H',
-    --     max=23,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=34.5,
-    --     thickness=14,
-    --     start_angle=180,
-    --     end_angle=270,
-    --     text_id=16
-    -- },
-    -- {
-    --     name='time',
-    --     arg='%M',
-    --     max=59,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.4,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=50,
-    --     thickness=14.5,
-    --     start_angle=180,
-    --     end_angle=270,
-    --     text_id=17
-    -- },
-    -- {
-    --     name='time',
-    --     arg='%S',
-    --     max=59,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=600,
-    --     radius=66,
-    --     thickness=15,
-    --     start_angle=180,
-    --     end_angle=270,
-    --     text_id=18
-    -- },
+    -- storage usage
+    {
+        name='fs_used_perc',
+        arg='/',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.25,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=66,
+        thickness=15,
+        start_angle=0,
+        end_angle=225,
+        text_id=24
+    },
+    {
+        name='fs_used_perc',
+        arg='/opt',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=50,
+        thickness=14.5,
+        start_angle=0,
+        end_angle=225,
+        text_id=25
+    },
+    {
+        name='fs_used_perc',
+        arg='/usr',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.15,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=34.5,
+        thickness=14.0,
+        start_angle=0,
+        end_angle=225,
+        text_id=26
+    },
+    {
+        name='fs_used_perc',
+        arg='/home',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.1,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=370,
+        radius=19.5,
+        thickness=13.5,
+        start_angle=0,
+        end_angle=225,
+        text_id=27
+    },
 
     -- cpu usage (text height=12, ring total height=220 + 10 (gap))
     {
@@ -331,7 +284,7 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=1
     },
@@ -346,7 +299,7 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=2
     },
@@ -361,7 +314,7 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=3
     },
@@ -377,7 +330,7 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=4
     },
@@ -392,7 +345,7 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=5
     },
@@ -407,7 +360,7 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=-40,
+        start_angle=-45,
         end_angle=90,
         text_id=6
     },
@@ -423,7 +376,7 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=7
     },
@@ -438,7 +391,7 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=8
     },
@@ -453,7 +406,7 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=9
     },
@@ -469,7 +422,7 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=10
     },
@@ -484,7 +437,7 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=11
     },
@@ -499,7 +452,7 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=140,
+        start_angle=135,
         end_angle=270,
         text_id=12
     }
@@ -583,8 +536,6 @@ function conky_ring_stats(cr)
 
         if pt.name == 'platform' then
             str = string.format( "%s %d", tset.text, value ) .. "°C"
-        elseif pt.name == 'time' then
-            str = string.format( "%02d", value )
         else
             str = string.format( "%s %d", tset.text, value ) .. "%"
         end
@@ -662,7 +613,7 @@ function conky_ring_stats(cr)
             else
                 pt.fg_colour = crit
             end
-        elseif pt.name ~= 'time' then
+        else
             warn_level = 80
             crit_level = 92
     
@@ -717,49 +668,44 @@ end
 -- array start from index 1
 text_settings = {
     -- cpu threads
-    { text = '1', show = true, x = 30, y = 40 },
-    { text = '2', show = true, x = 30, y = 52 },
-    { text = '3', show = true, x = 30, y = 64 },
+    { text = '1', show = true, x = 30, y = 75 },
+    { text = '2', show = true, x = 30, y = 87 },
+    { text = '3', show = true, x = 30, y = 99 },
 
-    { text = '4', show = true, x = 30, y = 76 },
-    { text = '5', show = true, x = 30, y = 88 },
-    { text = '6', show = true, x = 30, y = 100 },
+    { text = '4', show = true, x = 30, y = 111 },
+    { text = '5', show = true, x = 30, y = 123 },
+    { text = '6', show = true, x = 30, y = 135 },
     
-    { text = '7', show = true, x = 215, y = 190 },
-    { text = '8', show = true, x = 215, y = 202 },
-    { text = '9', show = true, x = 215, y = 214 },
+    { text = '7', show = true, x = 215, y = 153 },
+    { text = '8', show = true, x = 215, y = 165 },
+    { text = '9', show = true, x = 215, y = 177 },
     
-    { text = '10', show = true, x = 215, y = 226 },
-    { text = '11', show = true, x = 215, y = 238 },
-    { text = '12', show = true, x = 215, y = 250 },
+    { text = '10', show = true, x = 215, y = 189 },
+    { text = '11', show = true, x = 215, y = 201 },
+    { text = '12', show = true, x = 215, y = 213 },
     
     -- cpu core
-    { text = 'C01', show = true, x = 147, y = 100, ind_id = 1 },
-    { text = 'C02', show = true, x = 147, y = 112, ind_id = 2 },
-    { text = 'C03', show = true, x = 147, y = 124, ind_id = 3 },
-    { text = 'C04', show = true, x = 90, y = 164, ind_id = 4 },
-    { text = 'C05', show = true, x = 90, y = 176, ind_id = 5 },
-    { text = 'C06', show = true, x = 90, y = 188, ind_id = 6 },
+    { text = 'C01', show = true, x = 147, y = 100 },
+    { text = 'C02', show = true, x = 147, y = 112 },
+    { text = 'C03', show = true, x = 147, y = 124 },
+    { text = 'C04', show = true, x = 90, y = 164 },
+    { text = 'C05', show = true, x = 90, y = 176 },
+    { text = 'C06', show = true, x = 90, y = 188 },
 
     -- ram
-    { text = 'RAM', show = true, x = 30, y = 500, ind_id = 7 },
+    { text = 'RAM', show = true, x = 30, y = 269 },
+    { text = 'SWP', show = true, x = 30, y = 281 },
 
     -- cpu, gpu, bat and swap
-    { text = 'CPU', show = true, x = 230, y = 250, ind_id = 8 },
-    { text = 'GPU', show = true, x = 230, y = 480, ind_id = 9 },
-    { text = 'SWAP', show = true, x = 230, y = 694, ind_id = 10 },
-    { text = 'BAT', show = true, x = 230, y = 710, ind_id = 11 },
+    { text = 'CPU', show = true, x = 30, y = 293 },
+    { text = 'GPU', show = true, x = 30, y = 305 },
+    { text = 'BAT', show = true, x = 30, y = 317 },
 
     -- disk storage
-    { text = '/', show = true, x = 104, y = 538 },
-    { text = '/opt', show = true, x = 104, y = 554 },
-    { text = '/usr', show = true, x = 104, y = 570 },
-    { text = '/home', show = true, x = 104, y = 586 },
-
-    -- clock
-    { text = 'HH', show = true, x = 142, y = 638 },
-    { text = 'MM', show = true, x = 142, y = 654 },
-    { text = 'SS', show = true, x = 142, y = 670 },
+    { text = '/', show = true, x = 104, y = 308 },
+    { text = '/opt', show = true, x = 104, y = 324 },
+    { text = '/usr', show = true, x = 104, y = 340 },
+    { text = '/home', show = true, x = 104, y = 356 },
 }
 
 
@@ -784,6 +730,7 @@ text_indicator = {
 line_settings = {
     -- vertical
     { x1 = 30, y1 = 0, x2 = 30, y2 = 750 },
+    -- { x1 = 70, y1 = 0, x2 = 70, y2 = 750 },
     { x1 = 140, y1 = 0, x2 = 140, y2 = 750 },
     { x1 = 250, y1 = 0, x2 = 250, y2 = 750 },
     { x1 = 275, y1 = 0, x2 = 275, y2 = 750 },
@@ -930,7 +877,7 @@ function draw_elements(line_sketches_toggle)
     local cr = cairo_create(cs)
 
     draw_line_sketches(cr, line_sketches_toggle)
-    draw_text_indicator(cr)
+    -- draw_text_indicator(cr)
     conky_ring_stats(cr)
     draw_logo(cr)           -- logo needs to be render last due to cairo_set_source_surface
 
