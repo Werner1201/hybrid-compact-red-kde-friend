@@ -37,99 +37,99 @@ home_dir = "/home/dirn"
 -- darkgray | 0x323232
 
 settings_table = {
-    -- -- cpu core temperature
-    -- -- hwmon path /sys/bus/platform/devices/coretemp.0/hwmon/
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 2',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=140,
-    --     radius=91,
-    --     thickness=4,
-    --     start_angle=180,
-    --     end_angle=450,
-    --     text_id=1
-    -- },
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 3',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=140,
-    --     radius=85,
-    --     thickness=4,
-    --     start_angle=180,
-    --     end_angle=450,
-    --     text_id=2
-    -- },
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 4',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=140,
-    --     radius=100,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=3
-    -- },
+    -- cpu core temperature
+    -- hwmon path /sys/bus/platform/devices/coretemp.0/hwmon/
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 2',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=59,
+        thickness=8.0,
+        start_angle=270,
+        end_angle=360,
+        text_id=13
+    },
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 3',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.15,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=49,
+        thickness=8,
+        start_angle=270,
+        end_angle=360,
+        text_id=14
+    },
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 4',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.1,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=39,
+        thickness=8,
+        start_angle=270,
+        end_angle=360,
+        text_id=15
+    },
 
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 5',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=370,
-    --     radius=91,
-    --     thickness=4,
-    --     start_angle=180,
-    --     end_angle=450,
-    --     text_id=4
-    -- },
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 6',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.3,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=370,
-    --     radius=85,
-    --     thickness=4,
-    --     start_angle=180,
-    --     end_angle=450,
-    --     text_id=5
-    -- },
-    -- {
-    --     name='platform',
-    --     arg='coretemp.0/hwmon/hwmon5 temp 7',
-    --     max=110,
-    --     bg_colour=0xa8a8a8,
-    --     bg_alpha=0.5,
-    --     fg_colour=0x4285F4,
-    --     fg_alpha=1.0,
-    --     x=140, y=370,
-    --     radius=100,
-    --     thickness=4,
-    --     start_angle=0,
-    --     end_angle=270,
-    --     text_id=6
-    -- },
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 5',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.1,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=39,
+        thickness=8.0,
+        start_angle=90,
+        end_angle=180,
+        text_id=16
+    },
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 6',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.15,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=49,
+        thickness=8.0,
+        start_angle=90,
+        end_angle=180,
+        text_id=17
+    },
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 7',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x4285F4,
+        fg_alpha=1.0,
+        x=140, y=140,
+        radius=59,
+        thickness=8.0,
+        start_angle=90,
+        end_angle=180,
+        text_id=18
+    },
 
     -- -- ram usage
     -- {
@@ -331,7 +331,7 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=1
     },
@@ -346,7 +346,7 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=2
     },
@@ -361,7 +361,7 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=3
     },
@@ -377,7 +377,7 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=4
     },
@@ -392,7 +392,7 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=5
     },
@@ -407,7 +407,7 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=0,
+        start_angle=-40,
         end_angle=90,
         text_id=6
     },
@@ -423,7 +423,7 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=7
     },
@@ -438,7 +438,7 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=8
     },
@@ -453,7 +453,7 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=9
     },
@@ -469,7 +469,7 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=10
     },
@@ -484,7 +484,7 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=11
     },
@@ -499,7 +499,7 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=180,
+        start_angle=140,
         end_angle=270,
         text_id=12
     }
@@ -734,12 +734,12 @@ text_settings = {
     { text = '12', show = true, x = 215, y = 250 },
     
     -- cpu core
-    { text = 'C01', show = true, x = 30, y = 40, ind_id = 1 },
-    { text = 'C02', show = true, x = 30, y = 56, ind_id = 2 },
-    { text = 'C03', show = true, x = 230, y = 234, ind_id = 3 },
-    { text = 'C04', show = true, x = 30, y = 270, ind_id = 4 },
-    { text = 'C05', show = true, x = 30, y = 286, ind_id = 5 },
-    { text = 'C06', show = true, x = 230, y = 464, ind_id = 6 },
+    { text = 'C01', show = true, x = 147, y = 100, ind_id = 1 },
+    { text = 'C02', show = true, x = 147, y = 112, ind_id = 2 },
+    { text = 'C03', show = true, x = 147, y = 124, ind_id = 3 },
+    { text = 'C04', show = true, x = 90, y = 164, ind_id = 4 },
+    { text = 'C05', show = true, x = 90, y = 176, ind_id = 5 },
+    { text = 'C06', show = true, x = 90, y = 188, ind_id = 6 },
 
     -- ram
     { text = 'RAM', show = true, x = 30, y = 500, ind_id = 7 },
