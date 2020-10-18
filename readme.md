@@ -5,6 +5,9 @@
 
 ## Change Log
 
+- v1.0.1
+    - Adjusted rings radius and text
+
 - v1.0
     - Initial version
 

@@ -50,8 +50,8 @@ settings_table = {
         x=140, y=140,
         radius=43,
         thickness=11.0,
-        start_angle=270,
-        end_angle=360,
+        start_angle=0,
+        end_angle=60,
         text_id=13
     },
     {
@@ -65,8 +65,8 @@ settings_table = {
         x=140, y=140,
         radius=31,
         thickness=11.0,
-        start_angle=270,
-        end_angle=360,
+        start_angle=0,
+        end_angle=60,
         text_id=14
     },
     {
@@ -80,8 +80,8 @@ settings_table = {
         x=140, y=140,
         radius=19,
         thickness=11.0,
-        start_angle=270,
-        end_angle=360,
+        start_angle=0,
+        end_angle=60,
         text_id=15
     },
 
@@ -96,8 +96,8 @@ settings_table = {
         x=140, y=140,
         radius=19,
         thickness=11.0,
-        start_angle=90,
-        end_angle=180,
+        start_angle=180,
+        end_angle=240,
         text_id=16
     },
     {
@@ -111,8 +111,8 @@ settings_table = {
         x=140, y=140,
         radius=31,
         thickness=11.0,
-        start_angle=90,
-        end_angle=180,
+        start_angle=180,
+        end_angle=240,
         text_id=17
     },
     {
@@ -126,8 +126,8 @@ settings_table = {
         x=140, y=140,
         radius=43,
         thickness=11.0,
-        start_angle=90,
-        end_angle=180,
+        start_angle=180,
+        end_angle=240,
         text_id=18
     },
 
@@ -143,8 +143,8 @@ settings_table = {
         x=140, y=370,
         radius=106,
         thickness=4,
-        start_angle=0,
-        end_angle=270,
+        start_angle=300,
+        end_angle=600,
         text_id=19
     },
     {
@@ -158,8 +158,8 @@ settings_table = {
         x=140, y=370,
         radius=100,
         thickness=4,
-        start_angle=0,
-        end_angle=270,
+        start_angle=300,
+        end_angle=600,
         text_id=20
     },
 
@@ -175,8 +175,8 @@ settings_table = {
         x=140, y=370,
         radius=94,
         thickness=4,
-        start_angle=0,
-        end_angle=270,
+        start_angle=300,
+        end_angle=600,
         text_id=21
     },
     {
@@ -190,8 +190,8 @@ settings_table = {
         x=140, y=370,
         radius=88,
         thickness=4,
-        start_angle=0,
-        end_angle=270,
+        start_angle=300,
+        end_angle=600,
         text_id=22
     },
     {
@@ -205,8 +205,8 @@ settings_table = {
         x=140, y=370,
         radius=82,
         thickness=4,
-        start_angle=0,
-        end_angle=270,
+        start_angle=300,
+        end_angle=600,
         text_id=23
     },
 
@@ -220,10 +220,10 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=370,
-        radius=66,
-        thickness=15,
+        radius=55.5,
+        thickness=11.0,
         start_angle=0,
-        end_angle=225,
+        end_angle=240,
         text_id=24
     },
     {
@@ -235,10 +235,10 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=370,
-        radius=50,
-        thickness=14.5,
+        radius=43.5,
+        thickness=11.0,
         start_angle=0,
-        end_angle=225,
+        end_angle=240,
         text_id=25
     },
     {
@@ -250,10 +250,10 @@ settings_table = {
         fg_colour=0x4285F4,
         fg_alpha=1.0,
         x=140, y=370,
-        radius=34.5,
-        thickness=14.0,
+        radius=31.5,
+        thickness=11.0,
         start_angle=0,
-        end_angle=225,
+        end_angle=240,
         text_id=26
     },
     {
@@ -266,9 +266,9 @@ settings_table = {
         fg_alpha=1.0,
         x=140, y=370,
         radius=19.5,
-        thickness=13.5,
+        thickness=11.0,
         start_angle=0,
-        end_angle=225,
+        end_angle=240,
         text_id=27
     },
 
@@ -284,8 +284,8 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=1
     },
     {
@@ -299,8 +299,8 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=2
     },
     {
@@ -314,8 +314,8 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=3
     },
 
@@ -330,8 +330,8 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=4
     },
     {
@@ -345,8 +345,8 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=5
     },
     {
@@ -360,8 +360,8 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=-45,
-        end_angle=90,
+        start_angle=300,
+        end_angle=420,
         text_id=6
     },
     
@@ -376,8 +376,8 @@ settings_table = {
         x=140, y=140,
         radius=77,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=7
     },
     {
@@ -391,8 +391,8 @@ settings_table = {
         x=140, y=140,
         radius=83,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=8
     },
     {
@@ -406,8 +406,8 @@ settings_table = {
         x=140, y=140,
         radius=89,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=9
     },
 
@@ -422,8 +422,8 @@ settings_table = {
         x=140, y=140,
         radius=95,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=10
     },
     {
@@ -437,8 +437,8 @@ settings_table = {
         x=140, y=140,
         radius=101,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=11
     },
     {
@@ -452,8 +452,8 @@ settings_table = {
         x=140, y=140,
         radius=107,
         thickness=4.0,
-        start_angle=135,
-        end_angle=270,
+        start_angle=120,
+        end_angle=240,
         text_id=12
     }
 }
@@ -668,43 +668,44 @@ end
 -- array start from index 1
 text_settings = {
     -- cpu threads
-    { text = '1', show = true, x = 30, y = 75 },
-    { text = '2', show = true, x = 30, y = 87 },
-    { text = '3', show = true, x = 30, y = 99 },
+    { text = '1', show = true, x = 30, y = 114 },
+    { text = '2', show = true, x = 30, y = 126 },
+    { text = '3', show = true, x = 30, y = 138 },
 
-    { text = '4', show = true, x = 30, y = 111 },
-    { text = '5', show = true, x = 30, y = 123 },
-    { text = '6', show = true, x = 30, y = 135 },
+    { text = '4', show = true, x = 30, y = 150 },
+    { text = '5', show = true, x = 30, y = 162 },
+    { text = '6', show = true, x = 30, y = 174 },
     
-    { text = '7', show = true, x = 215, y = 153 },
-    { text = '8', show = true, x = 215, y = 165 },
-    { text = '9', show = true, x = 215, y = 177 },
+    { text = '7', show = true, x = 215, y = 114 },
+    { text = '8', show = true, x = 215, y = 126 },
+    { text = '9', show = true, x = 215, y = 138 },
     
-    { text = '10', show = true, x = 215, y = 189 },
-    { text = '11', show = true, x = 215, y = 201 },
-    { text = '12', show = true, x = 215, y = 213 },
+    { text = '10', show = true, x = 215, y = 150 },
+    { text = '11', show = true, x = 215, y = 162 },
+    { text = '12', show = true, x = 215, y = 174 },
     
     -- cpu core
-    { text = 'C01', show = true, x = 147, y = 100 },
-    { text = 'C02', show = true, x = 147, y = 112 },
-    { text = 'C03', show = true, x = 147, y = 124 },
-    { text = 'C04', show = true, x = 90, y = 164 },
-    { text = 'C05', show = true, x = 90, y = 176 },
-    { text = 'C06', show = true, x = 90, y = 188 },
+    -- { text = 'C01', show = true, x = 147, y = 100 },
+    { text = 'C01', show = true, x = 90, y = 100 },
+    { text = 'C02', show = true, x = 90, y = 112 },
+    { text = 'C03', show = true, x = 90, y = 124 },
+    { text = 'C04', show = true, x = 147, y = 164 },
+    { text = 'C05', show = true, x = 147, y = 176 },
+    { text = 'C06', show = true, x = 147, y = 188 },
 
     -- ram
-    { text = 'RAM', show = true, x = 30, y = 269 },
-    { text = 'SWP', show = true, x = 30, y = 281 },
+    { text = 'RAM', show = true, x = 30, y = 350 },
+    { text = 'SWP', show = true, x = 30, y = 362 },
 
     -- cpu, gpu, bat and swap
-    { text = 'CPU', show = true, x = 30, y = 293 },
-    { text = 'GPU', show = true, x = 30, y = 305 },
-    { text = 'BAT', show = true, x = 30, y = 317 },
+    { text = 'CPU', show = true, x = 30, y = 374 },
+    { text = 'GPU', show = true, x = 30, y = 386 },
+    { text = 'BAT', show = true, x = 30, y = 398 },
 
     -- disk storage
-    { text = '/', show = true, x = 104, y = 308 },
-    { text = '/opt', show = true, x = 104, y = 324 },
-    { text = '/usr', show = true, x = 104, y = 340 },
+    { text = '/', show = true, x = 104, y = 320 },
+    { text = '/opt', show = true, x = 104, y = 332 },
+    { text = '/usr', show = true, x = 104, y = 344 },
     { text = '/home', show = true, x = 104, y = 356 },
 }
 
