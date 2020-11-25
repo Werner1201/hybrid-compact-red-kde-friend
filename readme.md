@@ -5,6 +5,10 @@
 
 ## Change Log
 
+- v1.0.2
+    - Added setup_circle_text function
+    - Adjusted rings radius and text again. Previous version was damn ugly!
+
 - v1.0.1
     - Adjusted rings radius and text
 
@@ -40,7 +44,7 @@
 
 
 ## Auto Start
-- Inside startup folder search for hybrid-startup.sh file
+- Inside startup folder search for hybrid-compact-startup.sh file
 - Set hybrid-compact-startup.sh to be executable
 - Change the home path to your home path, seems like I can't use ~ at startup script
 - Add hybrid-compact-startup.sh to auto start program
@@ -150,6 +154,8 @@ I am not the original creator of the conkyrc file (has been tweaked for my usage
 It was downloaded way back in 2009 and I've no information of the original creator. Credit should go to him/her.
 
 hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by londonali1010 (2009), updated by La-Manoue (2016) and popi (2017).
+
+setup_circle_text function was copied and modified from circlewriting function created by mrpeachy.
 
 I do not own any of the distro logos bundled with this script. Please inform me if in case any of the logo are not allowed to be share.
 I will remove it as soon as possible.

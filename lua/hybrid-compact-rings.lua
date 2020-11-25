@@ -20,7 +20,6 @@ To call this script in Conky, use the following (assuming that you save this scr
 ]]
 
 g_main_colour = "0xa8a8a8"
-g_alt_colour = "0x0a0a0a"
 
 normal = "0x4285F4"
 warn = "0xff7200"
@@ -46,12 +45,12 @@ settings_table = {
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=43,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=60,
+        radius=100,
+        thickness=4.0,
+        start_angle=1,
+        end_angle=119,
         text_id=13
     },
     {
@@ -59,14 +58,14 @@ settings_table = {
         arg='coretemp.0/hwmon/hwmon5 temp 3',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.15,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=31,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=60,
+        radius=100,
+        thickness=4.0,
+        start_angle=121,
+        end_angle=239,
         text_id=14
     },
     {
@@ -74,14 +73,14 @@ settings_table = {
         arg='coretemp.0/hwmon/hwmon5 temp 4',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.1,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=19,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=60,
+        radius=100,
+        thickness=4.0,
+        start_angle=241,
+        end_angle=359,
         text_id=15
     },
 
@@ -90,14 +89,14 @@ settings_table = {
         arg='coretemp.0/hwmon/hwmon5 temp 5',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.1,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=19,
-        thickness=11.0,
-        start_angle=180,
-        end_angle=240,
+        radius=106,
+        thickness=4.0,
+        start_angle=1,
+        end_angle=119,
         text_id=16
     },
     {
@@ -105,14 +104,14 @@ settings_table = {
         arg='coretemp.0/hwmon/hwmon5 temp 6',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.15,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=31,
-        thickness=11.0,
-        start_angle=180,
-        end_angle=240,
+        radius=106,
+        thickness=4.0,
+        start_angle=121,
+        end_angle=239,
         text_id=17
     },
     {
@@ -122,29 +121,29 @@ settings_table = {
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=43,
-        thickness=11.0,
-        start_angle=180,
-        end_angle=240,
+        radius=106,
+        thickness=4.0,
+        start_angle=241,
+        end_angle=359,
         text_id=18
     },
 
-    -- ram, swap usage
+    -- -- ram, swap usage
     {
         name='memperc',
         arg='',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.5,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
         radius=106,
         thickness=4,
-        start_angle=300,
-        end_angle=600,
+        start_angle=241,
+        end_angle=359,
         text_id=19
     },
     {
@@ -152,31 +151,31 @@ settings_table = {
         arg='',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.45,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
         radius=100,
         thickness=4,
-        start_angle=300,
-        end_angle=600,
+        start_angle=241,
+        end_angle=359,
         text_id=20
     },
 
-    -- cpu temp, gpu temp and battery %
+    -- -- cpu temp, gpu temp and battery %
     {
         name='platform',
         arg='coretemp.0/hwmon/hwmon5 temp 1',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.4,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=94,
+        radius=106,
         thickness=4,
-        start_angle=300,
-        end_angle=600,
+        start_angle=1,
+        end_angle=119,
         text_id=21
     },
     {
@@ -184,14 +183,14 @@ settings_table = {
         arg='temp',
         max=110,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.35,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=88,
+        radius=100,
         thickness=4,
-        start_angle=300,
-        end_angle=600,
+        start_angle=1,
+        end_angle=119,
         text_id=22
     },
     {
@@ -199,31 +198,31 @@ settings_table = {
         arg='BAT1',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.3,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=82,
+        radius=106,
         thickness=4,
-        start_angle=300,
-        end_angle=600,
+        start_angle=121,
+        end_angle=239,
         text_id=23
     },
 
-    -- storage usage
+    -- -- storage usage
     {
         name='fs_used_perc',
         arg='/',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.25,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=55.5,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=240,
+        radius=66,
+        thickness=15.0,
+        start_angle=5,
+        end_angle=85,
         text_id=24
     },
     {
@@ -233,12 +232,12 @@ settings_table = {
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=43.5,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=240,
+        radius=66,
+        thickness=15.0,
+        start_angle=95,
+        end_angle=175,
         text_id=25
     },
     {
@@ -246,14 +245,14 @@ settings_table = {
         arg='/usr',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.15,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=31.5,
-        thickness=11.0,
-        start_angle=0,
-        end_angle=240,
+        radius=66,
+        thickness=15.0,
+        start_angle=185,
+        end_angle=265,
         text_id=26
     },
     {
@@ -261,15 +260,62 @@ settings_table = {
         arg='/home',
         max=100,
         bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x4285F4,
+        fg_alpha=0.6,
+        x=140, y=370,
+        radius=66,
+        thickness=15.0,
+        start_angle=275,
+        end_angle=355,
+        text_id=27
+    },
+
+    -- clock
+    {
+        name='time',
+        arg='%H',
+        max=23,
+        bg_colour=0xa8a8a8,
         bg_alpha=0.1,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=370,
-        radius=19.5,
-        thickness=11.0,
+        radius=35.0,
+        thickness=4,
         start_angle=0,
-        end_angle=240,
-        text_id=27
+        end_angle=360,
+        -- text_id=16
+    },
+    {
+        name='time',
+        arg='%M',
+        max=59,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x4285F4,
+        fg_alpha=0.6,
+        x=140, y=370,
+        radius=39.5,
+        thickness=3,
+        start_angle=0,
+        end_angle=360,
+        -- text_id=17
+    },
+    {
+        name='time',
+        arg='%S',
+        max=59,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.3,
+        fg_colour=0x4285F4,
+        fg_alpha=0.6,
+        x=140, y=370,
+        radius=43.5,
+        thickness=2,
+        start_angle=0,
+        end_angle=360,
+        -- text_id=18
     },
 
     -- cpu usage (text height=12, ring total height=220 + 10 (gap))
@@ -278,14 +324,14 @@ settings_table = {
         arg='cpu1',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.5,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=107,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=66,
+        thickness=15.0,
+        start_angle=5,
+        end_angle=85,
         text_id=1
     },
     {
@@ -293,14 +339,14 @@ settings_table = {
         arg='cpu2',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.45,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=101,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=66,
+        thickness=15.0,
+        start_angle=95,
+        end_angle=175,
         text_id=2
     },
     {
@@ -308,14 +354,14 @@ settings_table = {
         arg='cpu3',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.4,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=95,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=66,
+        thickness=15.0,
+        start_angle=185,
+        end_angle=265,
         text_id=3
     },
 
@@ -324,14 +370,14 @@ settings_table = {
         arg='cpu4',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.35,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=89,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=66,
+        thickness=15.0,
+        start_angle=275,
+        end_angle=355,
         text_id=4
     },
     {
@@ -339,14 +385,14 @@ settings_table = {
         arg='cpu5',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.3,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=83,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=50,
+        thickness=14.5,
+        start_angle=0,
+        end_angle=80,
         text_id=5
     },
     {
@@ -354,14 +400,14 @@ settings_table = {
         arg='cpu6',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.25,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=77,
-        thickness=4.0,
-        start_angle=300,
-        end_angle=420,
+        radius=50,
+        thickness=14.5,
+        start_angle=90,
+        end_angle=170,
         text_id=6
     },
     
@@ -370,14 +416,14 @@ settings_table = {
         arg='cpu7',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.25,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=77,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=50,
+        thickness=14.5,
+        start_angle=180,
+        end_angle=260,
         text_id=7
     },
     {
@@ -385,14 +431,14 @@ settings_table = {
         arg='cpu8',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.3,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=83,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=50,
+        thickness=14.5,
+        start_angle=270,
+        end_angle=350,
         text_id=8
     },
     {
@@ -400,14 +446,14 @@ settings_table = {
         arg='cpu9',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.35,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=89,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=34.5,
+        thickness=14.0,
+        start_angle=355,
+        end_angle=435,
         text_id=9
     },
 
@@ -416,14 +462,14 @@ settings_table = {
         arg='cpu10',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.4,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=95,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=34.5,
+        thickness=14.0,
+        start_angle=85,
+        end_angle=165,
         text_id=10
     },
     {
@@ -431,14 +477,14 @@ settings_table = {
         arg='cpu11',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.45,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=101,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=34.5,
+        thickness=14.0,
+        start_angle=175,
+        end_angle=255,
         text_id=11
     },
     {
@@ -446,14 +492,14 @@ settings_table = {
         arg='cpu12',
         max=100,
         bg_colour=0xa8a8a8,
-        bg_alpha=0.5,
+        bg_alpha=0.2,
         fg_colour=0x4285F4,
-        fg_alpha=1.0,
+        fg_alpha=0.6,
         x=140, y=140,
-        radius=107,
-        thickness=4.0,
-        start_angle=120,
-        end_angle=240,
+        radius=34.5,
+        thickness=14.0,
+        start_angle=265,
+        end_angle=345,
         text_id=12
     }
 }
@@ -490,7 +536,41 @@ function conky_ring_stats(cr)
     ]]
 
 
-    local function setup_fs_text(cr, tset, font_alt_colour, value)
+    local function setup_circle_text(cr, textdata, radi, horiz, verti, start, finish, var1)
+        -- textdata = "hello world!"
+        local ival = 1;
+
+        -- radi, horiz, verti, tcolor, talpha, start, finish, var1 = 63, 140, 140, 0xffffff, 1, 0, 70, 0
+
+        local inum = string.len(textdata)
+        range = finish
+        deg = (finish - start) / (inum - 1)
+        degrads = 1 * (math.pi / 180)
+
+        for str in string.gmatch(textdata, "(.)") do
+            -- print(i, str)
+            
+            interval = (degrads * (start + (deg * (ival - 1)))) + var1
+            interval2 = degrads * (start + (deg * (ival - 1)))
+            txs = 0 + radi * (math.sin(interval))
+            tys = 0 - radi * (math.cos(interval))
+
+            cairo_move_to (cr, txs + horiz, tys + verti);
+            cairo_rotate (cr, interval2)
+            
+            cairo_show_text (cr, (str))
+            cairo_rotate (cr, -interval2)
+            
+            -- is this 2 lines needed?
+            cairo_move_to (cr, 0, 0)
+            cairo_line_to (cr, hx0, hy0)
+            
+            ival = ival + 1
+        end
+    end
+
+
+    local function setup_fs_text(cr, tset, value)
         -- display storage path
         local str = tset.text
 
@@ -498,7 +578,6 @@ function conky_ring_stats(cr)
         cairo_show_text (cr, str)
 
         -- display storage perc used
-        cairo_set_source_rgb(cr, rgb_to_r_g_b(font_alt_colour))
         str = string.format( "%s", value ) .. '%'
         
         cairo_move_to (cr, tset.x + 38, tset.y)
@@ -548,24 +627,25 @@ function conky_ring_stats(cr)
     local function setup_text(cr, value, pt, tset)
         local font_name = 'Play'
         local font_colour = g_main_colour
-        local font_alt_colour = g_alt_colour
-        local font_size = 11
+        local font_size = 12
         local str = ''
     
         cairo_set_source_rgb(cr,rgb_to_r_g_b(font_colour))
     
-        cairo_select_font_face (cr, font_name, CAIRO_FONT_SLANT_BOLD, CAIRO_FONT_WEIGHT_NORMAL)
+        cairo_select_font_face (cr, font_name, CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_NORMAL)
         cairo_set_font_size (cr, font_size)
 
-        if pt.name == 'fs_used_perc' then
-            setup_fs_text(cr, tset, font_alt_colour, value)
-        elseif pt.name == 'nvidia' then
-            setup_nvidia_text(cr, tset, value)
-        elseif pt.name == 'cpu' then
-            setup_cpu_text(cr, tset, value)
-        else
-            setup_other_text(cr, pt, tset, value)
-        end
+        setup_circle_text(cr, "01 100%", 62, 140, 140, 10, 40, 0)
+
+        -- if pt.name == 'fs_used_perc' then
+        --     setup_fs_text(cr, tset, value)
+        -- elseif pt.name == 'nvidia' then
+        --     setup_nvidia_text(cr, tset, value)
+        -- elseif pt.name == 'cpu' then
+        --     setup_cpu_text(cr, tset, value)
+        -- else
+        --     setup_other_text(cr, pt, tset, value)
+        -- end
     
         cairo_fill_preserve (cr)
         cairo_stroke (cr)
@@ -613,7 +693,7 @@ function conky_ring_stats(cr)
             else
                 pt.fg_colour = crit
             end
-        else
+        elseif pt.name ~= 'time' then
             warn_level = 80
             crit_level = 92
     
@@ -669,44 +749,44 @@ end
 text_settings = {
     -- cpu threads
     { text = '1', show = true, x = 30, y = 114 },
-    { text = '2', show = true, x = 30, y = 126 },
-    { text = '3', show = true, x = 30, y = 138 },
+    { text = '2', show = false, x = 30, y = 126 },
+    { text = '3', show = false, x = 30, y = 138 },
 
-    { text = '4', show = true, x = 30, y = 150 },
-    { text = '5', show = true, x = 30, y = 162 },
-    { text = '6', show = true, x = 30, y = 174 },
+    { text = '4', show = false, x = 30, y = 150 },
+    { text = '5', show = false, x = 30, y = 162 },
+    { text = '6', show = false, x = 30, y = 174 },
     
-    { text = '7', show = true, x = 215, y = 114 },
-    { text = '8', show = true, x = 215, y = 126 },
-    { text = '9', show = true, x = 215, y = 138 },
+    { text = '7', show = false, x = 215, y = 114 },
+    { text = '8', show = false, x = 215, y = 126 },
+    { text = '9', show = false, x = 215, y = 138 },
     
-    { text = '10', show = true, x = 215, y = 150 },
-    { text = '11', show = true, x = 215, y = 162 },
-    { text = '12', show = true, x = 215, y = 174 },
+    { text = '10', show = false, x = 215, y = 150 },
+    { text = '11', show = false, x = 215, y = 162 },
+    { text = '12', show = false, x = 215, y = 174 },
     
     -- cpu core
-    -- { text = 'C01', show = true, x = 147, y = 100 },
-    { text = 'C01', show = true, x = 90, y = 100 },
-    { text = 'C02', show = true, x = 90, y = 112 },
-    { text = 'C03', show = true, x = 90, y = 124 },
-    { text = 'C04', show = true, x = 147, y = 164 },
-    { text = 'C05', show = true, x = 147, y = 176 },
-    { text = 'C06', show = true, x = 147, y = 188 },
+    -- { text = 'C01', show = false, x = 147, y = 100 },
+    { text = 'C01', show = false, x = 90, y = 100 },
+    { text = 'C02', show = false, x = 90, y = 112 },
+    { text = 'C03', show = false, x = 90, y = 124 },
+    { text = 'C04', show = false, x = 147, y = 164 },
+    { text = 'C05', show = false, x = 147, y = 176 },
+    { text = 'C06', show = false, x = 147, y = 188 },
 
     -- ram
-    { text = 'RAM', show = true, x = 30, y = 350 },
-    { text = 'SWP', show = true, x = 30, y = 362 },
+    { text = 'RAM', show = false, x = 30, y = 350 },
+    { text = 'SWP', show = false, x = 30, y = 362 },
 
     -- cpu, gpu, bat and swap
-    { text = 'CPU', show = true, x = 30, y = 374 },
-    { text = 'GPU', show = true, x = 30, y = 386 },
-    { text = 'BAT', show = true, x = 30, y = 398 },
+    { text = 'CPU', show = false, x = 30, y = 374 },
+    { text = 'GPU', show = false, x = 30, y = 386 },
+    { text = 'BAT', show = false, x = 30, y = 398 },
 
     -- disk storage
-    { text = '/', show = true, x = 104, y = 320 },
-    { text = '/opt', show = true, x = 104, y = 332 },
-    { text = '/usr', show = true, x = 104, y = 344 },
-    { text = '/home', show = true, x = 104, y = 356 },
+    { text = '/', show = false, x = 104, y = 320 },
+    { text = '/opt', show = false, x = 104, y = 332 },
+    { text = '/usr', show = false, x = 104, y = 344 },
+    { text = '/home', show = false, x = 104, y = 356 },
 }
 
 
