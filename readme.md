@@ -6,6 +6,7 @@
 ## Change Log
 
 - v1.0.2
+    - Changed font to Noto Sans
     - Added setup_circle_text function
     - Adjusted rings radius and text again. Previous version was damn ugly!
 
@@ -24,7 +25,7 @@
     - conky-all
  
 - **Fonts**
-    - Play font
+    - Noto Sans font
     - OpenLogos font (optional - only in case you want to use logo from OpenLogos)
 
 
@@ -155,7 +156,7 @@ It was downloaded way back in 2009 and I've no information of the original creat
 
 hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by londonali1010 (2009), updated by La-Manoue (2016) and popi (2017).
 
-setup_circle_text function was copied and modified from circlewriting function created by mrpeachy.
+setup_circle_text was copied and modified from circlewriting function created by mrpeachy.
 
 I do not own any of the distro logos bundled with this script. Please inform me if in case any of the logo are not allowed to be share.
 I will remove it as soon as possible.

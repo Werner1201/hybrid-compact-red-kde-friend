@@ -21,13 +21,13 @@ To call this script in Conky, use the following (assuming that you save this scr
 
 g_main_colour = "0xa8a8a8"
 
-normal = "0x4285F4"
+normal = "0x3458eb"
 warn = "0xff7200"
 crit = "0xff000d"
 update_num_min = 3
 home_dir = "/home/dirn"
 
--- blue     | 0x4285F4
+-- blue     | 0x3458eb
 -- red      | 0xff1d2b
 -- green    | 0x1dff22
 -- pink     | 0xff1d9f
@@ -36,6 +36,194 @@ home_dir = "/home/dirn"
 -- darkgray | 0x323232
 
 settings_table = {
+    -- cpu temp, gpu temp and battery %
+    {
+        name='platform',
+        arg='coretemp.0/hwmon/hwmon5 temp 1',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=106,
+        thickness=4,
+        start_angle=1,
+        end_angle=119,
+        text_id=1
+    },
+    {
+        name='nvidia',
+        arg='temp',
+        max=110,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=100,
+        thickness=4,
+        start_angle=1,
+        end_angle=119,
+        text_id=2
+    },
+    {
+        name='battery_percent',
+        arg='BAT1',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=106,
+        thickness=4,
+        start_angle=121,
+        end_angle=239,
+        text_id=3
+    },
+
+    -- ram, swap usage
+    {
+        name='memperc',
+        arg='',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=106,
+        thickness=4,
+        start_angle=241,
+        end_angle=359,
+        text_id=4
+    },
+    {
+        name='swapperc',
+        arg='',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=100,
+        thickness=4,
+        start_angle=241,
+        end_angle=359,
+        text_id=5
+    },
+
+    -- storage usage
+    {
+        name='fs_used_perc',
+        arg='/',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=75,
+        thickness=15.0,
+        start_angle=5,
+        end_angle=85,
+        text_id=6
+    },
+    {
+        name='fs_used_perc',
+        arg='/opt',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=75,
+        thickness=15.0,
+        start_angle=95,
+        end_angle=175,
+        text_id=7
+    },
+    {
+        name='fs_used_perc',
+        arg='/usr',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=75,
+        thickness=15.0,
+        start_angle=185,
+        end_angle=265,
+        text_id=8
+    },
+    {
+        name='fs_used_perc',
+        arg='/home',
+        max=100,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=75,
+        thickness=15.0,
+        start_angle=275,
+        end_angle=355,
+        text_id=9
+    },
+
+    -- clock
+    {
+        name='time',
+        arg='%H',
+        max=23,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.1,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=50.0,
+        thickness=4,
+        start_angle=0,
+        end_angle=360,
+        text_id=10
+    },
+    {
+        name='time',
+        arg='%M',
+        max=59,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.2,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=54.5,
+        thickness=3,
+        start_angle=0,
+        end_angle=360,
+        text_id=11
+    },
+    {
+        name='time',
+        arg='%S',
+        max=59,
+        bg_colour=0xa8a8a8,
+        bg_alpha=0.3,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
+        x=140, y=390,
+        radius=58.5,
+        thickness=2,
+        start_angle=0,
+        end_angle=360,
+        text_id=12
+    },
+
     -- cpu core temperature
     -- hwmon path /sys/bus/platform/devices/coretemp.0/hwmon/
     {
@@ -44,10 +232,10 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=100,
+        radius=106,
         thickness=4.0,
         start_angle=1,
         end_angle=119,
@@ -59,10 +247,10 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=100,
+        radius=106,
         thickness=4.0,
         start_angle=121,
         end_angle=239,
@@ -74,10 +262,10 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=100,
+        radius=106,
         thickness=4.0,
         start_angle=241,
         end_angle=359,
@@ -90,10 +278,10 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=106,
+        radius=100,
         thickness=4.0,
         start_angle=1,
         end_angle=119,
@@ -105,10 +293,10 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=106,
+        radius=100,
         thickness=4.0,
         start_angle=121,
         end_angle=239,
@@ -120,202 +308,14 @@ settings_table = {
         max=110,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=106,
+        radius=100,
         thickness=4.0,
         start_angle=241,
         end_angle=359,
         text_id=18
-    },
-
-    -- -- ram, swap usage
-    {
-        name='memperc',
-        arg='',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=106,
-        thickness=4,
-        start_angle=241,
-        end_angle=359,
-        text_id=19
-    },
-    {
-        name='swapperc',
-        arg='',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=100,
-        thickness=4,
-        start_angle=241,
-        end_angle=359,
-        text_id=20
-    },
-
-    -- -- cpu temp, gpu temp and battery %
-    {
-        name='platform',
-        arg='coretemp.0/hwmon/hwmon5 temp 1',
-        max=110,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=106,
-        thickness=4,
-        start_angle=1,
-        end_angle=119,
-        text_id=21
-    },
-    {
-        name='nvidia',
-        arg='temp',
-        max=110,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=100,
-        thickness=4,
-        start_angle=1,
-        end_angle=119,
-        text_id=22
-    },
-    {
-        name='battery_percent',
-        arg='BAT1',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=106,
-        thickness=4,
-        start_angle=121,
-        end_angle=239,
-        text_id=23
-    },
-
-    -- -- storage usage
-    {
-        name='fs_used_perc',
-        arg='/',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=66,
-        thickness=15.0,
-        start_angle=5,
-        end_angle=85,
-        text_id=24
-    },
-    {
-        name='fs_used_perc',
-        arg='/opt',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=66,
-        thickness=15.0,
-        start_angle=95,
-        end_angle=175,
-        text_id=25
-    },
-    {
-        name='fs_used_perc',
-        arg='/usr',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=66,
-        thickness=15.0,
-        start_angle=185,
-        end_angle=265,
-        text_id=26
-    },
-    {
-        name='fs_used_perc',
-        arg='/home',
-        max=100,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=66,
-        thickness=15.0,
-        start_angle=275,
-        end_angle=355,
-        text_id=27
-    },
-
-    -- clock
-    {
-        name='time',
-        arg='%H',
-        max=23,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.1,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=35.0,
-        thickness=4,
-        start_angle=0,
-        end_angle=360,
-        -- text_id=16
-    },
-    {
-        name='time',
-        arg='%M',
-        max=59,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=39.5,
-        thickness=3,
-        start_angle=0,
-        end_angle=360,
-        -- text_id=17
-    },
-    {
-        name='time',
-        arg='%S',
-        max=59,
-        bg_colour=0xa8a8a8,
-        bg_alpha=0.3,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
-        x=140, y=370,
-        radius=43.5,
-        thickness=2,
-        start_angle=0,
-        end_angle=360,
-        -- text_id=18
     },
 
     -- cpu usage (text height=12, ring total height=220 + 10 (gap))
@@ -325,14 +325,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=66,
+        radius=75,
         thickness=15.0,
         start_angle=5,
         end_angle=85,
-        text_id=1
+        text_id=19
     },
     {
         name='cpu',
@@ -340,14 +340,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=66,
+        radius=75,
         thickness=15.0,
         start_angle=95,
         end_angle=175,
-        text_id=2
+        text_id=20
     },
     {
         name='cpu',
@@ -355,14 +355,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=66,
+        radius=75,
         thickness=15.0,
         start_angle=185,
         end_angle=265,
-        text_id=3
+        text_id=21
     },
 
     {
@@ -371,14 +371,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=66,
+        radius=75,
         thickness=15.0,
         start_angle=275,
         end_angle=355,
-        text_id=4
+        text_id=22
     },
     {
         name='cpu',
@@ -386,14 +386,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=50,
+        radius=59.5,
         thickness=14.5,
         start_angle=0,
         end_angle=80,
-        text_id=5
+        text_id=23
     },
     {
         name='cpu',
@@ -401,14 +401,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=50,
+        radius=59.5,
         thickness=14.5,
         start_angle=90,
         end_angle=170,
-        text_id=6
+        text_id=24
     },
     
     {
@@ -417,14 +417,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=50,
+        radius=59.5,
         thickness=14.5,
         start_angle=180,
         end_angle=260,
-        text_id=7
+        text_id=25
     },
     {
         name='cpu',
@@ -432,14 +432,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=50,
+        radius=59.5,
         thickness=14.5,
         start_angle=270,
         end_angle=350,
-        text_id=8
+        text_id=26
     },
     {
         name='cpu',
@@ -447,14 +447,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=34.5,
+        radius=44.5,
         thickness=14.0,
         start_angle=355,
         end_angle=435,
-        text_id=9
+        text_id=27
     },
 
     {
@@ -463,14 +463,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=34.5,
+        radius=44.5,
         thickness=14.0,
         start_angle=85,
         end_angle=165,
-        text_id=10
+        text_id=28
     },
     {
         name='cpu',
@@ -478,14 +478,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=34.5,
+        radius=44.5,
         thickness=14.0,
         start_angle=175,
         end_angle=255,
-        text_id=11
+        text_id=29
     },
     {
         name='cpu',
@@ -493,14 +493,14 @@ settings_table = {
         max=100,
         bg_colour=0xa8a8a8,
         bg_alpha=0.2,
-        fg_colour=0x4285F4,
-        fg_alpha=0.6,
+        fg_colour=0x3458eb,
+        fg_alpha=1.0,
         x=140, y=140,
-        radius=34.5,
+        radius=44.5,
         thickness=14.0,
         start_angle=265,
         end_angle=345,
-        text_id=12
+        text_id=30
     }
 }
 
@@ -536,52 +536,54 @@ function conky_ring_stats(cr)
     ]]
 
 
-    local function setup_circle_text(cr, textdata, radi, horiz, verti, start, finish, var1)
-        -- textdata = "hello world!"
-        local ival = 1;
+    local function write_circle_text(cr, d_char, tset, degrads, deg, ival)
+        local interval = (degrads * (tset.s_angle + (deg * (ival - 1)))) + tset.l_position
+        local interval2 = degrads * (tset.s_angle + (deg * (ival - 1)))
+        local txs = 0 + tset.text_radius * (math.sin(interval))
+        local tys = 0 - tset.text_radius * (math.cos(interval))
 
+        cairo_move_to (cr, txs + tset.x, tys + tset.y);
+        cairo_rotate (cr, interval2)
+        
+        cairo_show_text (cr, d_char)
+        cairo_rotate (cr, -interval2)
+    end
+
+
+    local function setup_circle_text(cr, s_value, tset)
+        -- s_value = "hello world!"
         -- radi, horiz, verti, tcolor, talpha, start, finish, var1 = 63, 140, 140, 0xffffff, 1, 0, 70, 0
 
-        local inum = string.len(textdata)
-        range = finish
-        deg = (finish - start) / (inum - 1)
+        local ival, have_celsius, dis_text = 1, false, s_value;
+        local inum = string.len(s_value)
+        range = tset.e_angle
+        deg = (tset.e_angle - tset.s_angle) / (inum - 1)
         degrads = 1 * (math.pi / 180)
 
-        for str in string.gmatch(textdata, "(.)") do
-            -- print(i, str)
-            
-            interval = (degrads * (start + (deg * (ival - 1)))) + var1
-            interval2 = degrads * (start + (deg * (ival - 1)))
-            txs = 0 + radi * (math.sin(interval))
-            tys = 0 - radi * (math.cos(interval))
+        if string.match(s_value, "°C") then
+            have_celsius = true
+            dis_text = s_value:gsub("°C", "")
+            inum = inum - string.len("°C")
+            -- print(dis_text)
+        end
 
-            cairo_move_to (cr, txs + horiz, tys + verti);
-            cairo_rotate (cr, interval2)
-            
-            cairo_show_text (cr, (str))
-            cairo_rotate (cr, -interval2)
-            
-            -- is this 2 lines needed?
-            cairo_move_to (cr, 0, 0)
-            cairo_line_to (cr, hx0, hy0)
-            
+        for s_char in string.gmatch(dis_text, "(.)") do
+            write_circle_text(cr, s_char, tset, degrads, deg, ival)
             ival = ival + 1
+            -- print(ival, inum, s_char)
+
+            -- special handling for °C character
+            if ival > inum and have_celsius then
+                write_circle_text(cr, "°C", tset, degrads, deg, ival)
+            end
         end
     end
 
 
     local function setup_fs_text(cr, tset, value)
-        -- display storage path
-        local str = tset.text
-
-        cairo_move_to (cr, tset.x, tset.y)
-        cairo_show_text (cr, str)
-
-        -- display storage perc used
-        str = string.format( "%s", value ) .. '%'
+        local str = string.format( "%s %s", tset.text, value ) .. '%'
         
-        cairo_move_to (cr, tset.x + 38, tset.y)
-        cairo_show_text (cr, str)
+        setup_circle_text(cr, str, tset)
     end
 
 
@@ -595,8 +597,7 @@ function conky_ring_stats(cr)
             str = "N/A"
         end
 
-        cairo_move_to (cr, tset.x, tset.y)
-        cairo_show_text (cr, str)
+        setup_circle_text(cr, str, tset)
     end
 
 
@@ -605,29 +606,39 @@ function conky_ring_stats(cr)
         local thread_num = tonumber(tset.text)
 
         str = string.format( "%02d %s", tset.text, value ) .. "%"
-        cairo_move_to (cr, tset.x, tset.y)
-        cairo_show_text (cr, str)
+
+        setup_circle_text(cr, str, tset)
     end
 
 
     local function setup_other_text(cr, pt, tset, value)
         local str = ''
 
-        if pt.name == 'platform' then
-            str = string.format( "%s %d", tset.text, value ) .. "°C"
+        if pt.name ~= 'time' then
+            if pt.name == 'platform' then
+                str = string.format( "%s %d", tset.text, value ) .. "°C"
+            else
+                str = string.format( "%s %d", tset.text, value ) .. "%"
+            end
+            
+            setup_circle_text(cr, str, tset)
         else
-            str = string.format( "%s %d", tset.text, value ) .. "%"
-        end
+            if pt.arg == '%S' then
+                str = string.format( "%02d", value )
+            else
+                str = string.format( "%02d:", value )
+            end
 
-        cairo_move_to (cr, tset.x, tset.y)
-        cairo_show_text (cr, str)
+            cairo_move_to (cr, tset.x, tset.y)
+            cairo_show_text (cr, str)
+        end
     end
 
 
     local function setup_text(cr, value, pt, tset)
-        local font_name = 'Play'
+        local font_name = 'Noto Sans'
         local font_colour = g_main_colour
-        local font_size = 12
+        local font_size = 10
         local str = ''
     
         cairo_set_source_rgb(cr,rgb_to_r_g_b(font_colour))
@@ -635,17 +646,15 @@ function conky_ring_stats(cr)
         cairo_select_font_face (cr, font_name, CAIRO_FONT_SLANT_NORMAL, CAIRO_FONT_WEIGHT_NORMAL)
         cairo_set_font_size (cr, font_size)
 
-        setup_circle_text(cr, "01 100%", 62, 140, 140, 10, 40, 0)
-
-        -- if pt.name == 'fs_used_perc' then
-        --     setup_fs_text(cr, tset, value)
-        -- elseif pt.name == 'nvidia' then
-        --     setup_nvidia_text(cr, tset, value)
-        -- elseif pt.name == 'cpu' then
-        --     setup_cpu_text(cr, tset, value)
-        -- else
-        --     setup_other_text(cr, pt, tset, value)
-        -- end
+        if pt.name == 'fs_used_perc' then
+            setup_fs_text(cr, tset, value)
+        elseif pt.name == 'nvidia' then
+            setup_nvidia_text(cr, tset, value)
+        elseif pt.name == 'cpu' then
+            setup_cpu_text(cr, tset, value)
+        else
+            setup_other_text(cr, pt, tset, value)
+        end
     
         cairo_fill_preserve (cr)
         cairo_stroke (cr)
@@ -747,142 +756,103 @@ end
 
 -- array start from index 1
 text_settings = {
-    -- cpu threads
-    { text = '1', show = true, x = 30, y = 114 },
-    { text = '2', show = false, x = 30, y = 126 },
-    { text = '3', show = false, x = 30, y = 138 },
-
-    { text = '4', show = false, x = 30, y = 150 },
-    { text = '5', show = false, x = 30, y = 162 },
-    { text = '6', show = false, x = 30, y = 174 },
-    
-    { text = '7', show = false, x = 215, y = 114 },
-    { text = '8', show = false, x = 215, y = 126 },
-    { text = '9', show = false, x = 215, y = 138 },
-    
-    { text = '10', show = false, x = 215, y = 150 },
-    { text = '11', show = false, x = 215, y = 162 },
-    { text = '12', show = false, x = 215, y = 174 },
-    
-    -- cpu core
-    -- { text = 'C01', show = false, x = 147, y = 100 },
-    { text = 'C01', show = false, x = 90, y = 100 },
-    { text = 'C02', show = false, x = 90, y = 112 },
-    { text = 'C03', show = false, x = 90, y = 124 },
-    { text = 'C04', show = false, x = 147, y = 164 },
-    { text = 'C05', show = false, x = 147, y = 176 },
-    { text = 'C06', show = false, x = 147, y = 188 },
-
-    -- ram
-    { text = 'RAM', show = false, x = 30, y = 350 },
-    { text = 'SWP', show = false, x = 30, y = 362 },
-
     -- cpu, gpu, bat and swap
-    { text = 'CPU', show = false, x = 30, y = 374 },
-    { text = 'GPU', show = false, x = 30, y = 386 },
-    { text = 'BAT', show = false, x = 30, y = 398 },
+    { text = 'CPU', show = true, text_radius = 112, x = 140, y = 390, s_angle = 1, e_angle = 50, l_position = 0 },
+    { text = 'GPU', show = true, text_radius = 86, x = 140, y = 390, s_angle = 1, e_angle = 50, l_position = 0 },
+    { text = 'BAT', show = true, text_radius = 112, x = 140, y = 390, s_angle = 121, e_angle = 155, l_position = 0 },
+    
+    -- ram
+    { text = 'RAM', show = true, text_radius = 112, x = 140, y = 390, s_angle = 241, e_angle = 275, l_position = 0 },
+    { text = 'SWP', show = true, text_radius = 86, x = 140, y = 390, s_angle = 241, e_angle = 275, l_position = 0 },
 
     -- disk storage
-    { text = '/', show = false, x = 104, y = 320 },
-    { text = '/opt', show = false, x = 104, y = 332 },
-    { text = '/usr', show = false, x = 104, y = 344 },
-    { text = '/home', show = false, x = 104, y = 356 },
-}
+    { text = '/', show = true, text_radius = 71, x = 140, y = 390, s_angle = 10, e_angle = 40, l_position = 0 },
+    { text = '/opt', show = true, text_radius = 71, x = 140, y = 390, s_angle = 100, e_angle = 160, l_position = 0 },
+    { text = '/usr', show = true, text_radius = 71, x = 140, y = 390, s_angle = 190, e_angle = 250, l_position = 0 },
+    { text = '/home', show = true, text_radius = 71, x = 140, y = 390, s_angle = 278, e_angle = 345, l_position = 0 },
 
-
-text_indicator = {
-    -- { x1 = 75, y1 = 35, x2 = 115, y2 = 35, x3 = 128, y3 = 48, alpha = 0.8 },        -- c1
-    -- { x1 = 75, y1 = 51, x2 = 85, y2 = 51, x3 = 99, y3 = 65, alpha = 0.8 },          -- c2
-    -- { x1 = 202, y1 = 218, x2 = 216, y2 = 231, x3 = 226, y3 = 231, alpha = 0.8 },    -- c3
+    -- clock
+    { text = 'HH', show = true, x = 115, y = 395 },
+    { text = 'MM', show = true, x = 133, y = 395 },
+    { text = 'SS', show = true, x = 151, y = 395 },
     
-    -- { x1 = 75, y1 = 265, x2 = 115, y2 = 265, x3 = 128, y3 = 278, alpha = 0.8 },     -- c4
-    -- { x1 = 75, y1 = 281, x2 = 85, y2 = 281, x3 = 99, y3 = 295, alpha = 0.8 },       -- c5
-    -- { x1 = 202, y1 = 448, x2 = 216, y2 = 461, x3 = 226, y3 = 461, alpha = 0.8 },    -- c6
+    -- cpu core
+    { text = 'C01', show = true, text_radius = 112, x = 140, y = 140, s_angle = 1, e_angle = 50, l_position = 0 },
+    { text = 'C02', show = true, text_radius = 112, x = 140, y = 140, s_angle = 121, e_angle = 170, l_position = 0 },
+    { text = 'C03', show = true, text_radius = 112, x = 140, y = 140, s_angle = 241, e_angle = 290, l_position = 0 },
     
-    -- { x1 = 80, y1 = 495, x2 = 115, y2 = 495, x3 = 128, y3 = 508, alpha = 0.8 },     -- ram
+    { text = 'C04', show = true, text_radius = 86, x = 140, y = 140, s_angle = 1, e_angle = 50, l_position = 0 },
+    { text = 'C05', show = true, text_radius = 86, x = 140, y = 140, s_angle = 121, e_angle = 170, l_position = 0 },
+    { text = 'C06', show = true, text_radius = 86, x = 140, y = 140, s_angle = 241, e_angle = 290, l_position = 0 },
 
-    -- { x1 = 180, y1 = 237, x2 = 190, y2 = 247, x3 = 226, y3 = 247, alpha = 0.8 },    -- cpu
-    -- { x1 = 180, y1 = 467, x2 = 190, y2 = 477, x3 = 226, y3 = 477, alpha = 0.8 },    -- gpu
-    -- { x1 = 202, y1 = 678, x2 = 216, y2 = 691, x3 = 226, y3 = 691, alpha = 0.8 },    -- swap
-    -- { x1 = 180, y1 = 697, x2 = 190, y2 = 707, x3 = 226, y3 = 707, alpha = 0.8 }     -- bat
+    -- cpu threads
+    { text = '1', show = true, text_radius = 71, x = 140, y = 140, s_angle = 10, e_angle = 40, l_position = 0 },
+    { text = '2', show = true, text_radius = 71, x = 140, y = 140, s_angle = 100, e_angle = 132, l_position = 0 },
+    { text = '3', show = true, text_radius = 71, x = 140, y = 140, s_angle = 190, e_angle = 220, l_position = 0 },
+    { text = '4', show = true, text_radius = 71, x = 140, y = 140, s_angle = 280, e_angle = 308, l_position = 0 },
+
+    { text = '5', show = true, text_radius = 55, x = 140, y = 140, s_angle = 5, e_angle = 40, l_position = 0 },
+    { text = '6', show = true, text_radius = 55, x = 140, y = 140, s_angle = 95, e_angle = 132, l_position = 0 },
+    { text = '7', show = true, text_radius = 55, x = 140, y = 140, s_angle = 185, e_angle = 220, l_position = 0 },
+    { text = '8', show = true, text_radius = 55, x = 140, y = 140, s_angle = 275, e_angle = 308, l_position = 0 },
+
+    { text = '9', show = true, text_radius = 40, x = 140, y = 140, s_angle = 0, e_angle = 40, l_position = 0 },
+    { text = '10', show = true, text_radius = 40, x = 140, y = 140, s_angle = 90, e_angle = 132, l_position = 0 },
+    { text = '11', show = true, text_radius = 40, x = 140, y = 140, s_angle = 180, e_angle = 220, l_position = 0 },
+    { text = '12', show = true, text_radius = 40, x = 140, y = 140, s_angle = 270, e_angle = 308, l_position = 0 },
 }
 
 
 line_settings = {
     -- vertical
-    { x1 = 30, y1 = 0, x2 = 30, y2 = 750 },
+    { x1 = 30, y1 = 0, x2 = 30, y2 = 550 },
     -- { x1 = 70, y1 = 0, x2 = 70, y2 = 750 },
-    { x1 = 140, y1 = 0, x2 = 140, y2 = 750 },
-    { x1 = 250, y1 = 0, x2 = 250, y2 = 750 },
-    { x1 = 275, y1 = 0, x2 = 275, y2 = 750 },
+    { x1 = 140, y1 = 0, x2 = 140, y2 = 550 },
+    { x1 = 250, y1 = 0, x2 = 250, y2 = 550 },
+    { x1 = 275, y1 = 0, x2 = 275, y2 = 550 },
 
     -- horizontal
     { x1 = 0, y1 = 30, x2 = 470, y2 = 30 },
     -- { x1 = 0, y1 = 140, x2 = 270, y2 = 140 },
     { x1 = 0, y1 = 250, x2 = 270, y2 = 250 },
-    { x1 = 0, y1 = 260, x2 = 270, y2 = 260 },
+    { x1 = 0, y1 = 280, x2 = 270, y2 = 280 },
     -- { x1 = 0, y1 = 370, x2 = 270, y2 = 370 },
-    { x1 = 0, y1 = 480, x2 = 270, y2 = 480 },
-    { x1 = 0, y1 = 490, x2 = 270, y2 = 490 },
+    { x1 = 0, y1 = 500, x2 = 270, y2 = 500 },
+    -- { x1 = 0, y1 = 510, x2 = 270, y2 = 510 },
     -- { x1 = 0, y1 = 600, x2 = 270, y2 = 600 },
-    { x1 = 0, y1 = 710, x2 = 270, y2 = 710 },
+    -- { x1 = 0, y1 = 710, x2 = 270, y2 = 710 },
 
     -- diagonal
     { x1 = 0, y1 = 0, x2 = 290, y2 = 290 },
-    { x1 = 0, y1 = 230, x2 = 290, y2 = 520 },
-    { x1 = 0, y1 = 460, x2 = 290, y2 = 750 },
+    { x1 = 0, y1 = 250, x2 = 290, y2 = 540 },
+    -- { x1 = 0, y1 = 460, x2 = 290, y2 = 750 },
 }
 
 
 circle_settings = {
     { x = 230, y = 50, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
     { x = 50, y = 230, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 230, y = 280, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 50, y = 460, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 230, y = 510, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 50, y = 690, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 230, y = 300, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 50, y = 480, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
+    -- { x = 230, y = 510, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
+    -- { x = 50, y = 690, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
 
-    { x = 30, y = 255, radius = 50.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 250, y = 255, radius = 50.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 30, y = 485, radius = 50.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 250, y = 485, radius = 50.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 30, y = 265, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
+    { x = 250, y = 265, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
+    { x = 30, y = 515, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
+    { x = 250, y = 515, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
 
     { x = 140, y = 140, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 140, y = 370, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 140, y = 600, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 390, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
+    -- { x = 140, y = 600, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
 
     -- { x = 140, y = 140, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
     -- { x = 140, y = 370, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 140, y = 600, radius = 11.0, start_angle = 0.0, end_angle = 360.0 },
+    -- { x = 140, y = 600, radius = 10.8, start_angle = 0.0, end_angle = 360.0 },
 }
 
 
 function draw_elements(line_sketches_toggle)
-    local function draw_text_indicator(cr)
-        local line_colour, line_thick = g_main_colour, 1.5
-        
-        for x in pairs(text_settings) do
-            -- the usage of continue and ::continue:: is
-            -- not backward compatible with lua older version.
-
-            local text_item = text_settings[x]
-            
-            if text_item ~= nil and text_item.ind_id ~= nil then
-                local i_item = text_indicator[text_item.ind_id]
-    
-                if i_item ~= nil then
-                    cairo_set_source_rgba(cr, rgb_to_r_g_b(line_colour, i_item.alpha))
-                    cairo_set_line_width(cr, line_thick)
-            
-                    cairo_move_to (cr, i_item.x1, i_item.y1)
-                    cairo_line_to (cr, i_item.x2, i_item.y2)
-                    cairo_line_to (cr, i_item.x3, i_item.y3)
-                    cairo_stroke (cr)
-                end
-            end
-        end
-    end
-    
     
     local function draw_lines(cr)
         for x in pairs(line_settings) do
@@ -919,7 +889,7 @@ function draw_elements(line_sketches_toggle)
             return
         end
     
-        local line_colour, line_alpha, line_thick = g_main_colour, 0.15, 1.0
+        local line_colour, line_alpha, line_thick = g_main_colour, 0.15, 0.8
     
         cairo_set_source_rgba(cr, rgb_to_r_g_b(line_colour, line_alpha))
         cairo_set_line_width(cr, line_thick)
@@ -958,7 +928,6 @@ function draw_elements(line_sketches_toggle)
     local cr = cairo_create(cs)
 
     draw_line_sketches(cr, line_sketches_toggle)
-    -- draw_text_indicator(cr)
     conky_ring_stats(cr)
     draw_logo(cr)           -- logo needs to be render last due to cairo_set_source_surface
 
