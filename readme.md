@@ -6,7 +6,7 @@
 ## Change Log
 
 - v1.0.2
-    - Changed font to Noto Sans
+    - Changed font to NotoSans
     - Added setup_circle_text function
     - Adjusted rings radius and text again. Previous version was damn ugly!
 

@@ -554,7 +554,7 @@ function conky_ring_stats(cr)
         -- s_value = "hello world!"
         -- radi, horiz, verti, tcolor, talpha, start, finish, var1 = 63, 140, 140, 0xffffff, 1, 0, 70, 0
 
-        local ival, have_celsius, dis_text = 1, false, s_value;
+        local ival, have_celsius, d_text = 1, false, s_value;
         local inum = string.len(s_value)
         range = tset.e_angle
         deg = (tset.e_angle - tset.s_angle) / (inum - 1)
@@ -562,12 +562,12 @@ function conky_ring_stats(cr)
 
         if string.match(s_value, "°C") then
             have_celsius = true
-            dis_text = s_value:gsub("°C", "")
+            d_text = string.gsub(s_value, "°C", "")
             inum = inum - string.len("°C")
-            -- print(dis_text)
+            -- print(d_text)
         end
 
-        for s_char in string.gmatch(dis_text, "(.)") do
+        for s_char in string.gmatch(d_text, "(.)") do
             write_circle_text(cr, s_char, tset, degrads, deg, ival)
             ival = ival + 1
             -- print(ival, inum, s_char)
@@ -636,7 +636,7 @@ function conky_ring_stats(cr)
 
 
     local function setup_text(cr, value, pt, tset)
-        local font_name = 'Noto Sans'
+        local font_name = 'NotoSans'
         local font_colour = g_main_colour
         local font_size = 10
         local str = ''
