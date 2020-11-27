@@ -536,7 +536,7 @@ function conky_ring_stats(cr)
     ]]
 
 
-    local function write_circle_text(cr, d_char, tset, degrads, deg, ival)
+    local function write_circle_char(cr, display_char, tset, degrads, deg, ival)
         local interval = (degrads * (tset.s_angle + (deg * (ival - 1)))) + tset.l_position
         local interval2 = degrads * (tset.s_angle + (deg * (ival - 1)))
         local txs = 0 + tset.text_radius * (math.sin(interval))
@@ -545,36 +545,36 @@ function conky_ring_stats(cr)
         cairo_move_to (cr, txs + tset.x, tys + tset.y);
         cairo_rotate (cr, interval2)
         
-        cairo_show_text (cr, d_char)
+        cairo_show_text (cr, display_char)
         cairo_rotate (cr, -interval2)
     end
 
 
-    local function setup_circle_text(cr, s_value, tset)
-        -- s_value = "hello world!"
+    local function setup_circle_text(cr, display_text, tset)
+        -- display_text = "hello world!"
         -- radi, horiz, verti, tcolor, talpha, start, finish, var1 = 63, 140, 140, 0xffffff, 1, 0, 70, 0
 
-        local ival, have_celsius, d_text = 1, false, s_value;
-        local inum = string.len(s_value)
+        local ival, has_celsius, sub_text = 1, false, display_text;
+        local inum = string.len(display_text)
         range = tset.e_angle
         deg = (tset.e_angle - tset.s_angle) / (inum - 1)
         degrads = 1 * (math.pi / 180)
 
-        if string.match(s_value, "°C") then
-            have_celsius = true
-            d_text = string.gsub(s_value, "°C", "")
-            inum = inum - string.len("°C")
-            -- print(d_text)
+        if string.match(display_text, "°C") then
+            has_celsius = true
+            sub_text = string.gsub(display_text, "°C", "")
+            inum = string.len(sub_text)
+            -- print(sub_text)
         end
 
-        for s_char in string.gmatch(d_text, "(.)") do
-            write_circle_text(cr, s_char, tset, degrads, deg, ival)
+        for s_char in string.gmatch(sub_text, "(.)") do
+            write_circle_char(cr, s_char, tset, degrads, deg, ival)
             ival = ival + 1
             -- print(ival, inum, s_char)
 
             -- special handling for °C character
-            if ival > inum and have_celsius then
-                write_circle_text(cr, "°C", tset, degrads, deg, ival)
+            if ival > inum and has_celsius then
+                write_circle_char(cr, "°C", tset, degrads, deg, ival)
             end
         end
     end

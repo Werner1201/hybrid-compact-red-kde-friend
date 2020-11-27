@@ -25,7 +25,7 @@
     - conky-all
  
 - **Fonts**
-    - Noto Sans font
+    - NotoSans font
     - OpenLogos font (optional - only in case you want to use logo from OpenLogos)
 
 
