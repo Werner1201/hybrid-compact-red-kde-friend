@@ -772,9 +772,9 @@ text_settings = {
     { text = '/home', show = true, text_radius = 71, x = 140, y = 390, s_angle = 278, e_angle = 345, l_position = 0 },
 
     -- clock
-    { text = 'HH', show = true, x = 115, y = 395 },
-    { text = 'MM', show = true, x = 133, y = 395 },
-    { text = 'SS', show = true, x = 151, y = 395 },
+    { text = 'HH', show = true, x = 116, y = 394 },
+    { text = 'MM', show = true, x = 134, y = 394 },
+    { text = 'SS', show = true, x = 152, y = 394 },
     
     -- cpu core
     { text = 'C01', show = true, text_radius = 112, x = 140, y = 140, s_angle = 1, e_angle = 50, l_position = 0 },
@@ -787,68 +787,50 @@ text_settings = {
 
     -- cpu threads
     { text = '1', show = true, text_radius = 71, x = 140, y = 140, s_angle = 10, e_angle = 40, l_position = 0 },
-    { text = '2', show = true, text_radius = 71, x = 140, y = 140, s_angle = 100, e_angle = 132, l_position = 0 },
+    { text = '2', show = true, text_radius = 71, x = 140, y = 140, s_angle = 100, e_angle = 130, l_position = 0 },
     { text = '3', show = true, text_radius = 71, x = 140, y = 140, s_angle = 190, e_angle = 220, l_position = 0 },
-    { text = '4', show = true, text_radius = 71, x = 140, y = 140, s_angle = 280, e_angle = 308, l_position = 0 },
+    { text = '4', show = true, text_radius = 71, x = 140, y = 140, s_angle = 280, e_angle = 310, l_position = 0 },
 
     { text = '5', show = true, text_radius = 55, x = 140, y = 140, s_angle = 5, e_angle = 40, l_position = 0 },
-    { text = '6', show = true, text_radius = 55, x = 140, y = 140, s_angle = 95, e_angle = 132, l_position = 0 },
+    { text = '6', show = true, text_radius = 55, x = 140, y = 140, s_angle = 95, e_angle = 130, l_position = 0 },
     { text = '7', show = true, text_radius = 55, x = 140, y = 140, s_angle = 185, e_angle = 220, l_position = 0 },
-    { text = '8', show = true, text_radius = 55, x = 140, y = 140, s_angle = 275, e_angle = 308, l_position = 0 },
+    { text = '8', show = true, text_radius = 55, x = 140, y = 140, s_angle = 275, e_angle = 310, l_position = 0 },
 
     { text = '9', show = true, text_radius = 40, x = 140, y = 140, s_angle = 0, e_angle = 40, l_position = 0 },
-    { text = '10', show = true, text_radius = 40, x = 140, y = 140, s_angle = 90, e_angle = 132, l_position = 0 },
+    { text = '10', show = true, text_radius = 40, x = 140, y = 140, s_angle = 90, e_angle = 130, l_position = 0 },
     { text = '11', show = true, text_radius = 40, x = 140, y = 140, s_angle = 180, e_angle = 220, l_position = 0 },
-    { text = '12', show = true, text_radius = 40, x = 140, y = 140, s_angle = 270, e_angle = 308, l_position = 0 },
+    { text = '12', show = true, text_radius = 40, x = 140, y = 140, s_angle = 270, e_angle = 310, l_position = 0 },
 }
 
 
 line_settings = {
     -- vertical
     { x1 = 30, y1 = 0, x2 = 30, y2 = 550 },
-    -- { x1 = 70, y1 = 0, x2 = 70, y2 = 750 },
     { x1 = 140, y1 = 0, x2 = 140, y2 = 550 },
     { x1 = 250, y1 = 0, x2 = 250, y2 = 550 },
     { x1 = 275, y1 = 0, x2 = 275, y2 = 550 },
 
     -- horizontal
     { x1 = 0, y1 = 30, x2 = 470, y2 = 30 },
-    -- { x1 = 0, y1 = 140, x2 = 270, y2 = 140 },
+    { x1 = 0, y1 = 140, x2 = 270, y2 = 140 },
     { x1 = 0, y1 = 250, x2 = 270, y2 = 250 },
     { x1 = 0, y1 = 280, x2 = 270, y2 = 280 },
-    -- { x1 = 0, y1 = 370, x2 = 270, y2 = 370 },
+    { x1 = 0, y1 = 390, x2 = 270, y2 = 390 },
     { x1 = 0, y1 = 500, x2 = 270, y2 = 500 },
-    -- { x1 = 0, y1 = 510, x2 = 270, y2 = 510 },
-    -- { x1 = 0, y1 = 600, x2 = 270, y2 = 600 },
-    -- { x1 = 0, y1 = 710, x2 = 270, y2 = 710 },
 
     -- diagonal
     { x1 = 0, y1 = 0, x2 = 290, y2 = 290 },
+    { x1 = 0, y1 = 280, x2 = 280, y2 = 0 },
     { x1 = 0, y1 = 250, x2 = 290, y2 = 540 },
-    -- { x1 = 0, y1 = 460, x2 = 290, y2 = 750 },
 }
 
 
 circle_settings = {
-    { x = 230, y = 50, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 50, y = 230, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 230, y = 300, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 50, y = 480, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 230, y = 510, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 50, y = 690, radius = 18.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 140, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 390, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
 
-    { x = 30, y = 265, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
-    { x = 250, y = 265, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
-    { x = 30, y = 515, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
-    { x = 250, y = 515, radius = 57.5, start_angle = 0.0, end_angle = 360.0 },
-
-    { x = 140, y = 140, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
-    { x = 140, y = 390, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 140, y = 600, radius = 75.0, start_angle = 0.0, end_angle = 360.0 },
-
-    -- { x = 140, y = 140, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 140, y = 370, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
-    -- { x = 140, y = 600, radius = 10.8, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 140, radius = 124.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 390, radius = 124.0, start_angle = 0.0, end_angle = 360.0 },
 }
 
 
