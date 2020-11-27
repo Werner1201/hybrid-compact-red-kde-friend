@@ -5,6 +5,9 @@
 
 ## Change Log
 
+- v1.0.3
+    - fixed logo image path
+
 - v1.0.2
     - Changed font to NotoSans
     - Added setup_circle_text function

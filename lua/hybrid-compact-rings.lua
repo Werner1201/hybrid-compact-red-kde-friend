@@ -883,7 +883,7 @@ function draw_elements(line_sketches_toggle)
     
     local function draw_logo(cr)
         local w, h = 0, 0
-        local imagefile = home_dir .. "/.config/conky/hybrid/images/distro-1a.png"
+        local imagefile = home_dir .. "/.config/conky/hybrid-compact/images/distro-1a.png"
         local image = cairo_image_surface_create_from_png (imagefile)
     
         w = cairo_image_surface_get_width (image)
