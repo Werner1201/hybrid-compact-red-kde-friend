@@ -829,8 +829,15 @@ circle_settings = {
     { x = 140, y = 140, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
     { x = 140, y = 390, radius = 25.0, start_angle = 0.0, end_angle = 360.0 },
 
+    { x = 140, y = 390, radius = 83.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 140, radius = 83.0, start_angle = 0.0, end_angle = 360.0 },
     { x = 140, y = 140, radius = 124.0, start_angle = 0.0, end_angle = 360.0 },
     { x = 140, y = 390, radius = 124.0, start_angle = 0.0, end_angle = 360.0 },
+    
+    { x = 140, y = 140, radius = 100.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 140, radius = 106.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 390, radius = 100.0, start_angle = 0.0, end_angle = 360.0 },
+    { x = 140, y = 390, radius = 106.0, start_angle = 0.0, end_angle = 360.0 },
 }
 
 
@@ -871,7 +878,7 @@ function draw_elements(line_sketches_toggle)
             return
         end
     
-        local line_colour, line_alpha, line_thick = g_main_colour, 0.15, 0.8
+        local line_colour, line_alpha, line_thick = g_main_colour, 0.15, 0.5
     
         cairo_set_source_rgba(cr, rgb_to_r_g_b(line_colour, line_alpha))
         cairo_set_line_width(cr, line_thick)
