@@ -33,6 +33,9 @@
 
 
 ## Installation
+- Fonts
+    - Install fonts like normal.
+
 - Download the project and extract it. You have two options to install
     - Inside the project search for deploy.sh file
     - Set file deploy.sh to be executable
@@ -44,7 +47,15 @@
 ## To use
 - Open Konsole / Terminal and run
 
-        $ conky -c ~/.config/conky/hybrid-compact/hybrid-compact.conf &
+            $ conky -c ~/.config/conky/hybrid-compact/hybrid-compact.conf &
+
+- Alternatively
+    - Create symlink from your selected config
+    - Paste it to home folder
+    - Rename symlink to .conkyrc
+    - In terminal run conky
+
+            $ conky &
 
 
 ## Auto Start
@@ -82,9 +93,9 @@
 
                     local imagefile = home_dir .. "/.config/conky/hybrid-compact/images/distro-1a.png"
 
-        - **Update 11 Sep 2020**
+        - **Updates**
             
-            - Added 12 distro logos
+            - Added 13 distro logos
                 1. Manjaro
                 2. Linux Mint
                 3. Arch Linux
@@ -97,10 +108,11 @@
                 10. Fedora
                 11. Zorin
                 12. PCLinuxOS
+                13. Kali Linux
  
 
 - **Network interface** 
-    - In hybrid-compact.conf, you need to change network card interface. Replace enp7s0f1 and wlp0s20f3 with yours. If you only have a single interface you  can commented out the second network interface.
+    - In hybrid-compact.conf, you need to change network card interface. Replace enp7s0f1 and wlp0s20f3 with yours. This is optional. If you only have a single interface you  can commented out the second network interface.
 
             #${if_existing /proc/net/route wlp0s20f3}\
             #${goto 250}${font Play:style=Bold:size=8}Internal IP - wlp0s20f3 ${font Play:size=8}$# {alignr}${addr wlp0s20f3}
@@ -157,9 +169,9 @@
 I am not the original creator of the conkyrc file (has been tweaked for my usage).
 It was downloaded way back in 2009 and I've no information of the original creator. Credit should go to him/her.
 
-hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by londonali1010 (2009), updated by La-Manoue (2016) and popi (2017).
+hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by **londonali1010** (2009), updated by **La-Manoue** (2016) and **popi** (2017).
 
-setup_circle_text was copied and modified from circlewriting function created by mrpeachy.
+setup_circle_text was copied and modified from circlewriting function created by **mrpeachy**.
 
 I do not own any of the distro logos bundled with this script. Please inform me if in case any of the logo are not allowed to be share.
 I will remove it as soon as possible.
