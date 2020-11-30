@@ -44,7 +44,7 @@
 ## To use
 - Open Konsole / Terminal and run
 
-        $ conky -c ~/.config/conky/hybrid/hybrid-compact.conf &
+        $ conky -c ~/.config/conky/hybrid-compact/hybrid-compact.conf &
 
 
 ## Auto Start
@@ -74,13 +74,13 @@
 
         - Png image example:
 
-                ${voffset -930}${image ~/.config/conky/hybrid/images/distro-1a.png -p 475,16 -s 25x25}
+                ${voffset -930}${image ~/.config/conky/hybrid-compact/images/distro-1a.png -p 475,16 -s 25x25}
                 ${goto 250}${color2}${font Play:bold:size=16}${alignc}${execi 300 lsb_release -d | cut -c14-} ${color}
 
         - **Update 09 June 2020** 
             - Distro logo is now render from Lua script instead of Conky. To change open hybrid-rings.lua or hybrid-light-rings.lua file and search for draw_logo() function, don't forget to change home_dir value. Edit the line below:
 
-                    local imagefile = home_dir .. "/.config/conky/hybrid/images/distro-1a.png"
+                    local imagefile = home_dir .. "/.config/conky/hybrid-compact/images/distro-1a.png"
 
         - **Update 11 Sep 2020**
             
