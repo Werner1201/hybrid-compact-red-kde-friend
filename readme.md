@@ -1,7 +1,9 @@
 ## Hybrid Compact Red is a Conky theme that combines modern and classic style.
 
 ### Screenshot
-![Conky Image](/screenshots/screenshot.png)
+![Conky Image 1](/screenshots/screenshot.png)
+![Conky Image 2](/screenshots/screenshot1.png)
+
 
 ## Change Log
 - v1.0.4
