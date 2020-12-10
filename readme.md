@@ -1,4 +1,4 @@
-## Hybrid Compact is a Conky theme that combines modern and classic style.
+## Hybrid Compact Red is a Conky theme that combines modern and classic style.
 
 ### Screenshot
 ![Conky Image](/screenshots/screenshot.png)
@@ -169,8 +169,8 @@
 I am not the original creator of the conkyrc file (has been tweaked for my usage).
 It was downloaded way back in 2009 and I've no information of the original creator. Credit should go to him/her.
 
-hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by **londonali1010** (2009), updated by **La-Manoue** (2016) and **popi** (2017).
-
+hybrid-compact-rings.lua script is a modified and refactored version of mine. Script originally copied from conky-grapes theme's rings-v2_tpl which was created by **londonali1010** (2009), updated by **La-Manoue** (2016) and **popi** (2017), **dirn**(2020).
+(Most of this Readme was created by dirn)
 setup_circle_text was copied and modified from circlewriting function created by **mrpeachy**.
 
 I do not own any of the distro logos bundled with this script. Please inform me if in case any of the logo are not allowed to be share.
