@@ -4,6 +4,10 @@
 ![Conky Image](/screenshots/screenshot.png)
 
 ## Change Log
+- v1.0.4
+    - Changed some color related things
+    - Changed the Lua script so the user can use a smaller (less width) panel and have the Circles in the Middle
+    - Added global_x and top and down_global_y to controll the circle positions a little better. 
 
 - v1.0.3
     - fixed logo image path
